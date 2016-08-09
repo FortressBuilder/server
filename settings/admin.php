@@ -218,7 +218,7 @@ foreach ($forms as $index => $form) {
 	}
 }
 if ($filesExternal) {
-	$formsAndMore[] = array('anchor' => 'files_external', 'section-name' => $l->t('External Storage'));
+	$formsAndMore[] = array('anchor' => 'files_external', 'section-name' => $l->t('External storage'));
 }
 
 $template->assign('fileSharingSettings', $fileSharingSettings);
