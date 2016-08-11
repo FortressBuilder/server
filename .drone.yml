@@ -27,6 +27,12 @@ build:
       - rm -rf data/* config/config.php # TODO: remove this - temporary fix for CI issues
       - git submodule update --init
       - NOCOVERAGE=true TEST_SELECTION=NODB ./autotest.sh sqlite
+  nodb-php7.1:
+    image: nextcloudci/php7.1:php7.1-1
+    commands:
+      - rm -rf data/* config/config.php # TODO: remove this - temporary fix for CI issues
+      - git submodule update --init
+      - NOCOVERAGE=true TEST_SELECTION=NODB ./autotest.sh sqlite
   sqlite-php5.4:
     image: nextcloudci/php5.4:1.0.7
     commands:
@@ -47,6 +53,12 @@ build:
       - NOCOVERAGE=true TEST_SELECTION=DB ./autotest.sh sqlite
   sqlite-php7.0:
     image: nextcloudci/php7.0:1.0.9
+    commands:
+      - rm -rf data/* config/config.php # TODO: remove this - temporary fix for CI issues
+      - git submodule update --init
+      - NOCOVERAGE=true TEST_SELECTION=DB ./autotest.sh sqlite
+  sqlite-php7.1:
+    image: nextcloudci/php7.1:php7.1-1
     commands:
       - rm -rf data/* config/config.php # TODO: remove this - temporary fix for CI issues
       - git submodule update --init
